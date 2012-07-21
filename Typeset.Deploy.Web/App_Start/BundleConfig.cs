@@ -8,11 +8,12 @@ namespace Typeset.Deploy.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             var cssBundle = new Bundle("~/content/css/all", new CssMinify());
-            cssBundle.IncludeDirectory("~/Content", "*.css", true);
+            cssBundle.IncludeDirectory("~/Content", "typeset*.css", true);
             bundles.Add(cssBundle);
 
             var jsBundle = new Bundle("~/scripts/js/all", new JsMinify());
-            jsBundle.IncludeDirectory("~/Scripts", "*.js", true);
+            jsBundle.IncludeDirectory("~/Scripts", "*min.js", true);
+            jsBundle.IncludeDirectory("~/Scripts", "typeset*.js", true);
             bundles.Add(jsBundle);
 
             BundleTable.EnableOptimizations = true;
