@@ -1,0 +1,49 @@
+﻿@model Typeset.Deploy.Web.Models.Deploy.AppHarbor
+<div class="row">
+    <div class="span12">
+
+        <div class="page-header">
+            <h1>Deploy to AppHarbor</h1>
+        </div>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+        <div class="row">
+            <div class="span12">
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <h4 class="alert-heading">Error</h4>
+                    @Html.ValidationSummary()
+                </div>
+            </div>
+        </div>
+        } 
+
+        <div class="row">
+            <div class="span12">
+                <form class="well" method="post" action="@Url.Action("AppHarbor", "Deploy")">
+                    <label>Build Url</label>
+                    <input id="BuildUrl" name="BuildUrl" type="text" class="span4" placeholder="Type something…">
+                    <span class="help-block"><a data-toggle="modal" href="#buildUrlHelpModal">Help!</a> I don't know what my build url is.</span>
+                    <hr />
+                    <button type="submit" class="btn btn-primary">Deploy!</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <div class="modal hide" id="buildUrlHelpModal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Getting your AppHarbor Build Url</h3>
+            </div>
+            <div class="modal-body">
+                <img src="~/content/images/appharbor-build-url_normal.png" />
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+            </div>
+        </div>
+
+    </div>
+</div>

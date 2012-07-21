@@ -1,0 +1,25 @@
+﻿<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="~/">Typeset</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Deploy <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-header">Deploy to..</li>
+                            <li><a href="@Url.Action("AppHarbor", "Deploy")">to AppHarbor</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Manually", "Deploy")">Manually</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
