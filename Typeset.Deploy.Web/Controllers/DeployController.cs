@@ -50,6 +50,12 @@ namespace Typeset.Deploy.Web.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult Manually()
+        {
+            return Redirect("https://github.com/typeset/typeset/wiki/deploy");
+        }
+
         protected string GetLatestCommitId()
         {
             var key = "typeset-latest-commit-id";
