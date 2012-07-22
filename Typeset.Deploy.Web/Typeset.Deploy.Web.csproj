@@ -181,7 +181,16 @@
     <Content Include="Views\Deploy\AppHarbor.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Deploy\Success.cshtml" />
+    <Content Include="Views\Deploy\Successful.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Typeset.Deploy.Domain\Typeset.Deploy.Domain.csproj">
+      <Project>{BFD3E1EF-0894-4FB9-B95D-BCF42F04E092}</Project>
+      <Name>Typeset.Deploy.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Deploy\Unsuccessful.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
