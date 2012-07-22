@@ -7,7 +7,7 @@ namespace Typeset.Deploy.Web
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            var cssBundle = new Bundle("~/content/css/all", new CssMinify());
+            var cssBundle = new Bundle("~/content/css", new CssMinify());
             cssBundle.IncludeDirectory("~/Content", "typeset*.css", true);
             bundles.Add(cssBundle);
 

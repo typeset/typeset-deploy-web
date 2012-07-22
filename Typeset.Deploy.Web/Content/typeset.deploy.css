@@ -12,3 +12,8 @@
     display: inline;
     margin: 0 5px;
 }
+
+.icon-github-octocat {
+    background-image: url("http://markdotto.github.com/github-buttons/github-icons.png");
+    background-position: 0px 0px;
+}

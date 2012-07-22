@@ -1,17 +1,42 @@
 ﻿<div class="row">
     <div class="span12">
-        <div class="hero-unit">
-            <h1>Deploy typeset from the web!</h1>
-            <p>Deploy the latest typeset in seconds.</p>
-             <p>
-                <a class="btn btn-primary btn-large" href="#more">Learn More</a>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div id="more" class="row">
-    <div class="span12">
-        <p></p>
+        <ul class="thumbnails platforms">
+          <li class="span4">
+            <div class="thumbnail">
+                <a href="@Url.Action("AppHarbor", "Deploy")">
+                    <img src="~/content/images/appharbor_logo.png" alt="AppHarbor" />
+                </a>
+                <div class="caption">
+                    <h5>AppHarbor</h5>
+                    <p>AppHarbor is a fully hosted .NET Platform as a Service. AppHarbor can deploy and scale any standard .NET application to the cloud.</p>
+                    <p><a href="@Url.Action("AppHarbor", "Deploy")" class="btn btn-primary"><i class="icon-share icon-white"></i> Deploy to AppHarbor</a></p>
+                </div>
+            </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail">
+                <a href="https://github.com/typeset/typeset-deploy-web">
+                    <img src="~/content/images/octocat.png" alt="GitHub" />
+                </a>
+                <div class="caption">
+                    <h5>GitHub</h5>
+                    <p>Don't see your favorite platform here? typeset deploy is on GitHub, and we accept contributions.</p>
+                    <p><a href="https://github.com/typeset/typeset-deploy-web" class="btn btn-primary"><i class="icon-share icon-white"></i> Fork us on GitHub</a></p>
+                </div>
+            </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Manually", "Deploy")">
+                    <img src="http://placehold.it/512x512&text=manually" alt="manually" />
+                </a>
+                <div class="caption">
+                    <h5>Manually</h5>
+                    <p>Prefer to deploy typeset manually? Sure, no problem. We have documentation for that.</p>
+                    <p><a href="@Url.Action("Manually", "Deploy")" class="btn btn-primary"><i class="icon-share icon-white"></i> Deploy typeset manually</a></p>
+                </div>
+            </div>
+          </li>
+        </ul>
     </div>
 </div>
