@@ -9,8 +9,12 @@ namespace Typeset.Deploy.Web
     {
         protected void Application_Start()
         {
+            var container = IoCConfig.RegisterDependencies();
+
             MvcHandler.DisableMvcResponseHeader = true;
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            ControllerFactoryConfig.SetControllerFactory(container.Resolve<IControllerFactory>());
+            DependecyResolverConfig.RegisterDependencyResolver(container.Resolve<System.Web.Http.Dependencies.IDependencyResolver>());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
