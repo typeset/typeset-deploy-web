@@ -22,7 +22,7 @@ namespace Typeset.Deploy.Web
             container.Register<IController, DeployController>("Deploy").AsMultiInstance();
 
             //WebApi Controllers
-            container.Register<ValuesController>().AsMultiInstance();
+            //container.Register<ValuesController>().AsMultiInstance();
 
             //Domain
             container.Register<IGitHubRepository>((c, p) => new GitHubRepository("typeset", "typeset"));
