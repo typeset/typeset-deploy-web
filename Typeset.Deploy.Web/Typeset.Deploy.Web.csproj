@@ -143,6 +143,7 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-custom.css" />
     <Content Include="Content\images\appharbor_build_url.png" />
     <Content Include="Content\images\appharbor_logo.png" />
     <Content Include="Content\images\octocat.png" />
