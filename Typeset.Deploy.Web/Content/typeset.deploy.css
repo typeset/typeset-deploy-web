@@ -1,3 +1,7 @@
+.navbar .brand {
+    color: White;
+}
+
 .quick-links {
     list-style: none outside none;
     margin: 0;
